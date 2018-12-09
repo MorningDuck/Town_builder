@@ -1,0 +1,1 @@
+if distance_to_object(house_obj) < 10 instance_destroy()
