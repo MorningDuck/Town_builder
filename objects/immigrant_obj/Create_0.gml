@@ -5,4 +5,4 @@ choose_site();
 
 current_speed = 3;
 
-size = irandom_range(1,8);
+pop_size = irandom_range(1,8);

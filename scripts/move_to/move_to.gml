@@ -3,14 +3,7 @@ rocks_tile = 3;
 
 if (x < destination_x) 
 {
-	if (tile_get_index(tilemap_get(global.map,(x+global.tw) / global.tw,y / global.tw)) == dirt_tile)
-	{
-		x += current_speed;
-	}
-	else if (tile_get_index(tilemap_get(global.map,(x+global.tw) / global.tw,y / global.tw)) == rocks_tile)
-	{
-		x += current_speed - 1;
-	}
+	// follow stored path using node_next
 	
 }
 

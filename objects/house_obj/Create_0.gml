@@ -9,10 +9,18 @@ water_income = 0;
 fuel = 0;
 
 max_hpop = 10;
-household_pop = 1;
+household_pop = 0;
 idle = household_pop;
 mover_cooldown = 60;
 
-info = instance_create_layer(x,y+15,"UI",house_info_obj);
-
 residents[0] = "";
+
+placing = true;
+build_cooldown = 5;
+
+occupied = false;
+
+field_level = 0;
+
+size_x = 2;
+size_y = 2;
