@@ -11,3 +11,5 @@ if ((not_eaten) && !(global.daytime))
 	not_eaten = false;
 }
 
+
+

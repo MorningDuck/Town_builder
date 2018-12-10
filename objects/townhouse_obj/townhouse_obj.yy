@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "townhouse_obj",
     "eventList": [
-        
+        {
+            "id": "25af0a7c-e62e-49ea-a0e8-d3724929f740",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "ee092ee1-a208-40aa-93a3-b2a74ad5416c"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

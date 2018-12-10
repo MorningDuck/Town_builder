@@ -1,0 +1,1 @@
+global.food += 1;

@@ -5,3 +5,6 @@ global.day = 0;
 
 global.daytime = true;
 
+
+
+
