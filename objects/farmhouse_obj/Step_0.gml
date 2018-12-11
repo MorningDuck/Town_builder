@@ -3,7 +3,7 @@ if (placing)
 	build(farmhouse_obj);
 }
 
-else if !(occupied)
+else if !(occupied) 
 {
 	occupied = true;
 	household_pop = 5;
@@ -20,7 +20,8 @@ else if ((field_level == 0) && (distance_to_object(instance_nearest(x,y,water_so
 			// check if array is out of bounds
 			if (x / global.tw + i >= 0) 
 				&& (x / global.tw + i < room_width / global.tw) 
-				&& (y / global.tw + j >= 0) && (y / global.tw + j < room_height / global.tw)
+				&& (y / global.tw + j >= 0) 
+				&& (y / global.tw + j < room_height / global.tw)
 			{
 				if (!(global.tile_occupied[x / global.tw + i, y / global.tw + j]) 
 					&& (tile_get_index(tilemap_get(global.map,x / global.tw + i, y / global.tw + j)) == 1))
@@ -55,3 +56,5 @@ else if ((field_level == 1) && (global.production >= 50) && (occupied))
 		}
 	}
 }
+
+else if (field_level == 2 && global.production < 50) field_level = 1;

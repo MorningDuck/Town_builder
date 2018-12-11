@@ -12,19 +12,32 @@ for (var i = 0;  i < size_x; i += 1)
 {
 	for (var j = 0; j < size_y; j += 1)
 	{
-		if (global.tile_occupied[x / global.tw + i, y / global.tw + j]) free_space = false;
+		if (x / global.tw + i >= 0) 
+				&& (x / global.tw + i < room_width / global.tw) 
+				&& (y / global.tw + j >= 0) 
+				&& (y / global.tw + j < room_height / global.tw)
+		{
+			if (global.tile_occupied[x / global.tw + i, y / global.tw + j]) free_space = false;
+		}
 	}
 }
 	
-if ((mouse_check_button_released(mb_left)) && (build_cooldown < 1) && free_space)
+if ((mouse_check_button_released(mb_left)) && (build_cooldown < 1) && free_space && x > 0 && y > 0 && x < room_width && y < room_height)
 {
 	placing = false;
 	instance_create_layer(x,y,"Objects",building_id);
 	for (var i = 0; i < size_x; i += 1)
 	{
+		
 		for (var j = 0; j < size_y; j += 1)
 		{
-			global.tile_occupied[x / global.tw + i, y / global.tw + j] = true;
+			if (x / global.tw + i >= 0) 
+				&& (x / global.tw + i < room_width / global.tw) 
+				&& (y / global.tw + j >= 0) 
+				&& (y / global.tw + j < room_height / global.tw)
+			{
+				global.tile_occupied[x / global.tw + i, y / global.tw + j] = true;
+			}
 		}
 	}
 }

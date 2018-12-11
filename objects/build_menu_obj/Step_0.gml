@@ -12,6 +12,7 @@ if ((mx > global.camx + global.camw - 100)
 		global.building = true;
 		instance_create_layer(mouse_x,mouse_y,"Objects",townhouse_obj);
 		building_roads = false;
+		destroying = false;
 	}
 }
 
@@ -26,6 +27,7 @@ else if ((mx > global.camx + global.camw - 100)
 		global.building = true;
 		instance_create_layer(mouse_x,mouse_y,"Objects",farmhouse_obj);
 		building_roads = false;
+		destroying = false;
 	}
 }
 
@@ -40,6 +42,7 @@ else if ((mx > global.camx + global.camw - 100)
 		global.building = true;
 		instance_create_layer(mouse_x,mouse_y,"Objects",workshop_obj);
 		building_roads = false;
+		destroying = false;
 	}
 }
 
@@ -49,6 +52,26 @@ else if ((mx > global.camx + global.camw - 100)
 	&& (my > global.camy + 450) 
 	&& (my < global.camy + 530))
 {
+	if (mouse_check_button(mb_left)) && !(global.building)
+	{
+		destroying = true;
+	}
+}
+	
+if (destroying)
+{
+	if mouse_check_button(mb_left)
+	{
+		if mouse_check_button_pressed(mb_left)
+		{
+			position_destroy(mouse_x, mouse_y);
+		}
+	}
+	else if mouse_check_button(mb_right) destroying = false;
+}
+	
+	
+/*{
 	if (mouse_check_button(mb_left))
 	{
 		building_roads = true;
@@ -76,4 +99,4 @@ if (building_roads)
 	}
 	
 	else if (mouse_check_button(mb_right)) building_roads = false;
-}
+}*/

@@ -4,7 +4,7 @@ draw_sprite(farmhouse_icon_spr,0,global.camx + global.camw - 100, global.camy + 
 
 draw_sprite(workshop_icon_spr,0,global.camx + global.camw - 100, global.camy + 350);
 
-draw_sprite(road_icon_spr,0,global.camx + global.camw - 100, global.camy + 450);
+draw_sprite(hammer_spr,0,global.camx + global.camw - 100, global.camy + 450);
 
 if (building_roads)
 {
@@ -13,3 +13,16 @@ if (building_roads)
 	draw_sprite(green_tile_spr,0,rx,ry);
 	draw_text(rx, ry, string(tilemap_get(global.map,rx / global.tw,ry / global.tw)));
 }
+
+if destroying
+{
+	window_set_cursor(cr_none);
+	cursor_sprite = hammer_mouse_spr;
+}
+else 
+{
+	window_set_cursor(cr_default);
+	cursor_sprite = -1;
+}
+
+
