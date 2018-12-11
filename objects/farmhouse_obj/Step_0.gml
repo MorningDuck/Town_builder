@@ -17,12 +17,17 @@ else if ((field_level == 0) && (distance_to_object(instance_nearest(x,y,water_so
 	{
 		for (var j = -1; j <= 2; j += 1)
 		{
-			if (!(global.tile_occupied[x / global.tw + i, y / global.tw + j]) 
-				&& (tile_get_index(tilemap_get(global.map,x / global.tw + i, y / global.tw + j)) == 1))
+			// check if array is out of bounds
+			if (x / global.tw + i >= 0) 
+				&& (x / global.tw + i < room_width / global.tw) 
+				&& (y / global.tw + j >= 0) && (y / global.tw + j < room_height / global.tw)
 			{
-				instance_create_layer(x + i*global.tw, y + j*global.tw, "Objects", farm_tile_obj);
-				global.tile_occupied[x / global.tw + i, y / global.tw + j] = true;
-				global.food += 1; // bug produces the wrong food amount
+				if (!(global.tile_occupied[x / global.tw + i, y / global.tw + j]) 
+					&& (tile_get_index(tilemap_get(global.map,x / global.tw + i, y / global.tw + j)) == 1))
+				{
+					instance_create_layer(x + i*global.tw, y + j*global.tw, "Objects", farm_tile_obj);
+					global.tile_occupied[x / global.tw + i, y / global.tw + j] = true;
+				}
 			}
 		}
 	}
@@ -35,12 +40,17 @@ else if ((field_level == 1) && (global.production >= 50) && (occupied))
 	{
 		for (var j = -2; j <= 3; j += 1)
 		{
-			if (!(global.tile_occupied[x / global.tw + i, y / global.tw + j]) 
-				&& (tile_get_index(tilemap_get(global.map,x / global.tw + i, y / global.tw + j)) == 1))
+			// check if array is out of bounds
+			if (x / global.tw + i >= 0) 
+				&& (x / global.tw + i < room_width / global.tw) 
+				&& (y / global.tw + j >= 0) && (y / global.tw + j < room_height / global.tw)
 			{
-				instance_create_layer(x + i*global.tw, y + j*global.tw, "Objects", farm_tile_obj);
-				global.tile_occupied[x / global.tw + i, y / global.tw + j] = true;
-				global.food += 1; // bug produces the wrong food amount
+				if (!(global.tile_occupied[x / global.tw + i, y / global.tw + j]) 
+					&& (tile_get_index(tilemap_get(global.map,x / global.tw + i, y / global.tw + j)) == 1))
+				{
+					instance_create_layer(x + i*global.tw, y + j*global.tw, "Objects", farm_tile_obj);
+					global.tile_occupied[x / global.tw + i, y / global.tw + j] = true;
+				}
 			}
 		}
 	}
