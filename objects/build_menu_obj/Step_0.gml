@@ -1,11 +1,11 @@
-mx = window_view_mouse_get_x(0);
-my = window_view_mouse_get_y(0);
+mx = device_mouse_x_to_gui(0);
+my = device_mouse_y_to_gui(0);
 
-// press 1st button (townhouse)
-if ((mx > global.camx + global.camw - 100) 
-	&& (mx < global.camx + global.camw - 20) 
-	&& (my > global.camy + 150) 
-	&& (my < global.camy + 230))
+// townhouse button
+if ((mx > bg_x + button_right_x) 
+	&& (mx < bg_x + button_right_x + 70) 
+	&& (my > bg_y + button1_y) 
+	&& (my < bg_y + button1_y + 70))
 {
 	if ((mouse_check_button(mb_left)) && !(global.building))
 	{
@@ -16,11 +16,11 @@ if ((mx > global.camx + global.camw - 100)
 	}
 }
 
-// 2nd button
-else if ((mx > global.camx + global.camw - 100) 
-	&& (mx < global.camx + global.camw - 20) 
-	&& (my > global.camy + 250) 
-	&& (my < global.camy + 330))
+// farmhouse button
+else if ((mx > bg_x + button_left_x) 
+	&& (mx < bg_x + button_left_x + 70) 
+	&& (my > bg_y + button1_y) 
+	&& (my < bg_y + button1_y + 70))
 {
 	if (mouse_check_button(mb_left)) && !(global.building)
 	{
@@ -31,11 +31,11 @@ else if ((mx > global.camx + global.camw - 100)
 	}
 }
 
-//3rd button
-else if ((mx > global.camx + global.camw - 100) 
-	&& (mx < global.camx + global.camw - 20) 
-	&& (my > global.camy + 350) 
-	&& (my < global.camy + 430))
+//workshop button
+else if ((mx > bg_x + button_left_x) 
+	&& (mx < bg_x + button_left_x + 70) 
+	&& (my > bg_y + button2_y) 
+	&& (my < bg_y + button2_y + 70))
 {
 	if (mouse_check_button(mb_left)) && !(global.building)
 	{
@@ -46,15 +46,29 @@ else if ((mx > global.camx + global.camw - 100)
 	}
 }
 
-//4th button
-else if ((mx > global.camx + global.camw - 100) 
-	&& (mx < global.camx + global.camw - 20) 
-	&& (my > global.camy + 450) 
-	&& (my < global.camy + 530))
+//destroy button
+else if ((mx > bg_x + button_right_x) 
+	&& (mx < bg_x + button_right_x  + 70) 
+	&& (my > bg_y + button3_y) 
+	&& (my < bg_y + button3_y + 70))
 {
 	if (mouse_check_button(mb_left)) && !(global.building)
 	{
 		destroying = true;
+		building_roads = false;
+	}
+}
+
+//roads button
+else if ((mx > bg_x + button_left_x) 
+	&& (mx < bg_x + button_left_x + 70) 
+	&& (my > bg_y + button3_y) 
+	&& (my < bg_y + button3_y  + 70))
+{
+	if (mouse_check_button(mb_left)) && !(global.building)
+	{
+		building_roads = true;
+		destroying = false;
 	}
 }
 	
@@ -70,17 +84,10 @@ if (destroying)
 	else if mouse_check_button(mb_right) destroying = false;
 }
 	
-	
-/*{
-	if (mouse_check_button(mb_left))
-	{
-		building_roads = true;
-	}
-}
 
 if (building_roads)
 {
-	if ((mouse_check_button(mb_left)) && mx < global.camx + global.camw - 100)
+	if ((mouse_check_button(mb_left)) && mx < bg_x)
 	{
 		var rx = (window_view_mouse_get_x(0) / global.tw);
 		var ry = (window_view_mouse_get_y(0) / global.tw);
@@ -99,4 +106,4 @@ if (building_roads)
 	}
 	
 	else if (mouse_check_button(mb_right)) building_roads = false;
-}*/
+}
