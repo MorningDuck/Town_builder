@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "1c90ce46-5391-4d46-9295-3780b0db2979",
+            "Value": {
+                "id": "1cab9e78-c5e5-48c3-b35d-1a6109bf4bf1",
+                "resourcePath": "sprites\\square_button_spr\\square_button_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1d58f241-9dba-4bdc-be91-273d2a578d9e",
             "Value": {
                 "id": "9f085a48-aa73-4eff-b97b-bc296c26bbae",
@@ -231,6 +239,14 @@
             }
         },
         {
+            "Key": "48bef358-d111-4bea-803f-1ba9afbf7952",
+            "Value": {
+                "id": "87087ae6-f9d1-45e9-9cc8-dcea1321481d",
+                "resourcePath": "sprites\\build_menu_spr\\build_menu_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4a13bbf7-7f61-4618-9aec-d81b47fd7094",
             "Value": {
                 "id": "71d98cee-652b-4a6d-9f41-91e393e073b9",
@@ -252,6 +268,14 @@
                 "id": "3bb0e584-e330-4039-aa88-c6325c6d8ad0",
                 "resourcePath": "sprites\\townhouse_icon_spr\\townhouse_icon_spr.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "50e613df-ba50-44d7-970f-f77093171dc6",
+            "Value": {
+                "id": "7682d18e-382c-474f-afbc-976e7016b600",
+                "resourcePath": "rooms\\colony2\\colony2.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -522,7 +546,7 @@
             "Key": "bbeb9867-2f9a-4fea-bfdf-93f6fe725205",
             "Value": {
                 "id": "071478ac-f7bb-4c5e-8849-c7a35d99bfe6",
-                "resourcePath": "sprites\\button_spr\\button_spr.yy",
+                "resourcePath": "sprites\\text_button_spr\\text_button_spr.yy",
                 "resourceType": "GMSprite"
             }
         },
