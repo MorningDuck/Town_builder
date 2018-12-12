@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "724f907d-d306-48f4-9a20-9e1f1721cf39",
+            "Value": {
+                "id": "eb54a707-9155-489e-8694-5e25b45dbca4",
+                "resourcePath": "datafiles_yy\\Essays1743-Italic.ttf.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "738476b3-d2cf-4f0a-8200-32ea4a00c237",
             "Value": {
                 "id": "c672f41c-0aaa-4a12-bc6c-83915a50be78",
@@ -359,11 +367,27 @@
             }
         },
         {
+            "Key": "898ce901-c6a7-472e-9dca-34ac9812281a",
+            "Value": {
+                "id": "4babfa9d-148c-46f2-bb17-0907d15d1014",
+                "resourcePath": "fonts\\HUD_font\\HUD_font.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "8ef94cc5-4d40-4ee1-95bc-1d6999330dfb",
             "Value": {
                 "id": "88a87a66-c304-4e4d-b5c7-51923881cab0",
                 "resourcePath": "scripts\\in_farmhouse_range\\in_farmhouse_range.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8f826093-047f-4748-ae14-5790e6d4f161",
+            "Value": {
+                "id": "94369d7c-c48c-499c-8840-b75030ea2620",
+                "resourcePath": "datafiles_yy\\Essays1743.ttf.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -500,6 +524,14 @@
                 "id": "8def6f3d-a0db-4898-831e-69519a0bce44",
                 "resourcePath": "views\\bf4aaa3d-d10c-481f-a615-fc8c0b6e2c92.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c296b63e-618a-4ca9-b2e8-4a19793eaad3",
+            "Value": {
+                "id": "cdacd7b7-4444-4aaf-b690-55d290a8aaa2",
+                "resourcePath": "rooms\\colony1\\colony1.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

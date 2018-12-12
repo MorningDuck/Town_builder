@@ -1,12 +1,13 @@
-mx = window_view_mouse_get_x(0);
-my = window_view_mouse_get_y(0);
+mx = device_mouse_x_to_gui(0);
+my = device_mouse_y_to_gui(0);
 
-if ((global.production >= 50)
-	&& (mx > global.camx + 10) 
-	&& (mx < global.camx + 130) 
-	&& (my > global.camy + global.camh - 90) 
-	&& (my < global.camy + global.camh - 10))
+if ((global.production >= 50) &&
+	(mx > 30)
+	&& (mx < 150)
+	&& (my > display_get_gui_height() - 110)
+	&& (my < display_get_gui_height() - 30))
 {
+	
 	if (mouse_check_button(mb_left)) 
 	{
 		showing_map = true;
@@ -19,26 +20,26 @@ if !showing_map selection = 0;
 
 if showing_map
 {
-	if ((mx > global.camx + 600) 
-	&& (mx < global.camx + 650) 
-	&& (my > global.camy + 270) 
-	&& (my < global.camy + 320))
+	if ((mx > map_buffer_x + city1_x) 
+		&& (mx <  map_buffer_x + city1_x + 50) 
+		&& (my >  map_buffer_y + city1_y) 
+		&& (my <  map_buffer_y + city1_y + 50))
 	{
 		if mouse_check_button(mb_left) selection = 1; // "Our colony!"
 	}
 	
-	else if ((mx > global.camx + 550) 
-	&& (mx < global.camx + 600) 
-	&& (my > global.camy + 220) 
-	&& (my < global.camy + 270))
+	else if ((mx > map_buffer_x + city2_x) 
+		&& (mx <  map_buffer_x + city2_x + 50) 
+		&& (my >  map_buffer_y + city2_y) 
+		&& (my <  map_buffer_y + city2_y + 50))
 	{
 		if mouse_check_button(mb_left) selection = 2; // Location 1
 	}
 	
-	else if ((mx > global.camx + 600) 
-	&& (mx < global.camx + 650) 
-	&& (my > global.camy + 350) 
-	&& (my < global.camy + 400))
+	else if ((mx > map_buffer_x + city3_x) 
+		&& (mx <  map_buffer_x + city3_x + 50) 
+		&& (my >  map_buffer_y + city3_y) 
+		&& (my <  map_buffer_y + city3_y + 50))
 	{
 		if mouse_check_button(mb_left) selection = 3; // Location 2
 	}

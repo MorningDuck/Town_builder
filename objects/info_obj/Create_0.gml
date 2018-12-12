@@ -1,0 +1,1 @@
+global.light_cream = make_color_rgb(242,217,165);
