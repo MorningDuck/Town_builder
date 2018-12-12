@@ -1,8 +1,8 @@
 mx = device_mouse_x_to_gui(0);
 my = device_mouse_y_to_gui(0);
 
-if ((global.production >= 50) &&
-	(mx > 30)
+//if ((global.production >= 50) &&
+if(	(mx > 30)
 	&& (mx < 150)
 	&& (my > display_get_gui_height() - 110)
 	&& (my < display_get_gui_height() - 30))

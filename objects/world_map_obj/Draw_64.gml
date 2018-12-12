@@ -1,11 +1,12 @@
-if global.production >= 50 draw_sprite(world_map_icon_spr,0, 30, display_get_gui_height() - 30);
+//if global.production >= 50 
+draw_sprite(world_map_icon_spr,0, 30, display_get_gui_height() - 30);
 
 if (showing_map)
 {
-	draw_sprite(world_map_spr,0,  map_buffer_x,  map_buffer_y)
-	draw_sprite(map_house_icon_spr, 0,  map_buffer_x + city1_x,  map_buffer_y + city1_y)
-	draw_sprite(map_unknown_spr, 0, map_buffer_x + city2_x , map_buffer_y + city2_y )
-	draw_sprite(map_unknown_spr, 0, map_buffer_x + city3_x , map_buffer_y + city3_y )
+	draw_sprite(world_map_spr,0,  map_buffer_x,  map_buffer_y);
+	draw_sprite(map_house_icon_spr, 0,  map_buffer_x + city1_x,  map_buffer_y + city1_y);
+	draw_sprite(map_unknown_spr, 0, map_buffer_x + city2_x , map_buffer_y + city2_y );
+	draw_sprite(map_unknown_spr, 0, map_buffer_x + city3_x , map_buffer_y + city3_y );
 	
 	draw_set_halign(fa_left)
 	draw_set_font(info_font);
@@ -26,7 +27,9 @@ if (showing_map)
 		case 3:
 		draw_text( map_buffer_x + text_buffer_x, map_buffer_y + text_buffer_y1,"An unknown");
 		draw_text( map_buffer_x + text_buffer_x, map_buffer_y + text_buffer_y2,"land");
-		break;
+		draw_sprite(button_spr,0, map_buffer_x + explore_button_x, map_buffer_y + explore_button_y);
+		draw_set_font(button_font);
+		draw_text(map_buffer_x + explore_button_x + 30, map_buffer_y + explore_button_y ,"Explore");
 	}
 }
 

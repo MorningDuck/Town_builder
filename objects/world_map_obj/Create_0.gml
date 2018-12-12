@@ -5,6 +5,9 @@ selection = 0;
 map_buffer_x = 50;
 map_buffer_y = 70;
 
+explore_button_x = 80;
+explore_button_y = 120;
+
 text_buffer_x = 60;
 text_buffer_y1 = 55;
 text_buffer_y2 = 85;
